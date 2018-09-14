@@ -63,6 +63,7 @@ describe 'SubscriptionApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :stripe_plan_id The Stripe plan id. This parameter is effective only when the service is \&quot;stripe\&quot;.
   # @option opts [String] :token This parameter represents the card token. This parameter is effective only when the service is \&quot;stripe\&quot;.
+  # @option opts [String] :affiliate_id Affiliate id of inviter user.
   # @return [Subscription]
   describe 'create_subscription test' do
     it "should work" do

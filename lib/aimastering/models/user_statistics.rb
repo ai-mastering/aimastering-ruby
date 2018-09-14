@@ -14,82 +14,41 @@ require 'date'
 
 module Aimastering
 
-  class Subscription
-    attr_accessor :id
+  class UserStatistics
+    attr_accessor :registration_invitation_count
 
-    attr_accessor :user_id
+    attr_accessor :subscription_invitation_count
 
-    attr_accessor :stripe_subscription_id
+    attr_accessor :mastering_count
 
-    attr_accessor :current_period_start_at
+    attr_accessor :monthly_registration_invitation_count
 
-    attr_accessor :current_period_end_at
+    attr_accessor :monthly_subscription_invitation_count
 
-    attr_accessor :canceled
+    attr_accessor :monthly_mastering_count
 
-    attr_accessor :cancel_at_period_end
-
-    attr_accessor :trial_end
-
-    attr_accessor :status
-
-    attr_accessor :created_at
-
-    attr_accessor :updated_at
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'user_id' => :'user_id',
-        :'stripe_subscription_id' => :'stripe_subscription_id',
-        :'current_period_start_at' => :'current_period_start_at',
-        :'current_period_end_at' => :'current_period_end_at',
-        :'canceled' => :'canceled',
-        :'cancel_at_period_end' => :'cancel_at_period_end',
-        :'trial_end' => :'trial_end',
-        :'status' => :'status',
-        :'created_at' => :'created_at',
-        :'updated_at' => :'updated_at'
+        :'registration_invitation_count' => :'registration_invitation_count',
+        :'subscription_invitation_count' => :'subscription_invitation_count',
+        :'mastering_count' => :'mastering_count',
+        :'monthly_registration_invitation_count' => :'monthly_registration_invitation_count',
+        :'monthly_subscription_invitation_count' => :'monthly_subscription_invitation_count',
+        :'monthly_mastering_count' => :'monthly_mastering_count'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'Integer',
-        :'user_id' => :'Integer',
-        :'stripe_subscription_id' => :'String',
-        :'current_period_start_at' => :'DateTime',
-        :'current_period_end_at' => :'DateTime',
-        :'canceled' => :'BOOLEAN',
-        :'cancel_at_period_end' => :'BOOLEAN',
-        :'trial_end' => :'DateTime',
-        :'status' => :'String',
-        :'created_at' => :'DateTime',
-        :'updated_at' => :'DateTime'
+        :'registration_invitation_count' => :'Integer',
+        :'subscription_invitation_count' => :'Integer',
+        :'mastering_count' => :'Integer',
+        :'monthly_registration_invitation_count' => :'Integer',
+        :'monthly_subscription_invitation_count' => :'Integer',
+        :'monthly_mastering_count' => :'Integer'
       }
     end
 
@@ -101,48 +60,28 @@ module Aimastering
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'registration_invitation_count')
+        self.registration_invitation_count = attributes[:'registration_invitation_count']
       end
 
-      if attributes.has_key?(:'user_id')
-        self.user_id = attributes[:'user_id']
+      if attributes.has_key?(:'subscription_invitation_count')
+        self.subscription_invitation_count = attributes[:'subscription_invitation_count']
       end
 
-      if attributes.has_key?(:'stripe_subscription_id')
-        self.stripe_subscription_id = attributes[:'stripe_subscription_id']
+      if attributes.has_key?(:'mastering_count')
+        self.mastering_count = attributes[:'mastering_count']
       end
 
-      if attributes.has_key?(:'current_period_start_at')
-        self.current_period_start_at = attributes[:'current_period_start_at']
+      if attributes.has_key?(:'monthly_registration_invitation_count')
+        self.monthly_registration_invitation_count = attributes[:'monthly_registration_invitation_count']
       end
 
-      if attributes.has_key?(:'current_period_end_at')
-        self.current_period_end_at = attributes[:'current_period_end_at']
+      if attributes.has_key?(:'monthly_subscription_invitation_count')
+        self.monthly_subscription_invitation_count = attributes[:'monthly_subscription_invitation_count']
       end
 
-      if attributes.has_key?(:'canceled')
-        self.canceled = attributes[:'canceled']
-      end
-
-      if attributes.has_key?(:'cancel_at_period_end')
-        self.cancel_at_period_end = attributes[:'cancel_at_period_end']
-      end
-
-      if attributes.has_key?(:'trial_end')
-        self.trial_end = attributes[:'trial_end']
-      end
-
-      if attributes.has_key?(:'status')
-        self.status = attributes[:'status']
-      end
-
-      if attributes.has_key?(:'created_at')
-        self.created_at = attributes[:'created_at']
-      end
-
-      if attributes.has_key?(:'updated_at')
-        self.updated_at = attributes[:'updated_at']
+      if attributes.has_key?(:'monthly_mastering_count')
+        self.monthly_mastering_count = attributes[:'monthly_mastering_count']
       end
 
     end
@@ -157,19 +96,7 @@ module Aimastering
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      status_validator = EnumAttributeValidator.new('String', ["trialing", "active", "past_due", "unpaid", "canceled"])
-      return false unless status_validator.valid?(@status)
       return true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] status Object to be assigned
-    def status=(status)
-      validator = EnumAttributeValidator.new('String', ["trialing", "active", "past_due", "unpaid", "canceled"])
-      unless validator.valid?(status)
-        fail ArgumentError, "invalid value for 'status', must be one of #{validator.allowable_values}."
-      end
-      @status = status
     end
 
     # Checks equality by comparing each attribute.
@@ -177,17 +104,12 @@ module Aimastering
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          user_id == o.user_id &&
-          stripe_subscription_id == o.stripe_subscription_id &&
-          current_period_start_at == o.current_period_start_at &&
-          current_period_end_at == o.current_period_end_at &&
-          canceled == o.canceled &&
-          cancel_at_period_end == o.cancel_at_period_end &&
-          trial_end == o.trial_end &&
-          status == o.status &&
-          created_at == o.created_at &&
-          updated_at == o.updated_at
+          registration_invitation_count == o.registration_invitation_count &&
+          subscription_invitation_count == o.subscription_invitation_count &&
+          mastering_count == o.mastering_count &&
+          monthly_registration_invitation_count == o.monthly_registration_invitation_count &&
+          monthly_subscription_invitation_count == o.monthly_subscription_invitation_count &&
+          monthly_mastering_count == o.monthly_mastering_count
     end
 
     # @see the `==` method
@@ -199,7 +121,7 @@ module Aimastering
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, user_id, stripe_subscription_id, current_period_start_at, current_period_end_at, canceled, cancel_at_period_end, trial_end, status, created_at, updated_at].hash
+      [registration_invitation_count, subscription_invitation_count, mastering_count, monthly_registration_invitation_count, monthly_subscription_invitation_count, monthly_mastering_count].hash
     end
 
     # Builds the object from hash

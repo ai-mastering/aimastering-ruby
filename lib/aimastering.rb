@@ -40,6 +40,7 @@ require 'aimastering/models/payment_customer'
 require 'aimastering/models/plan'
 require 'aimastering/models/subscription'
 require 'aimastering/models/user'
+require 'aimastering/models/user_statistics'
 require 'aimastering/models/video'
 require 'aimastering/models/video_download_token'
 

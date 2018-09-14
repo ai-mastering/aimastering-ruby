@@ -43,6 +43,31 @@ describe 'UserApi' do
     end
   end
 
+  # unit tests for notify_registration
+  # Notify user is registered.
+  # 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :affiliate_id The affiliate id of inviter.
+  # @option opts [String] :referrer_url The referrer URL.
+  # @return [User]
+  describe 'notify_registration test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for send_invitation
+  # Send invitation.
+  # 
+  # @param invitee_email The email of invitee.
+  # @param [Hash] opts the optional parameters
+  # @return [User]
+  describe 'send_invitation test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for update_self
   # Update self user.
   # 

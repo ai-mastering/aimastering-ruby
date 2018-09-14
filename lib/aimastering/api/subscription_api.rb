@@ -144,6 +144,7 @@ module Aimastering
     # @param [Hash] opts the optional parameters
     # @option opts [String] :stripe_plan_id The Stripe plan id. This parameter is effective only when the service is \&quot;stripe\&quot;.
     # @option opts [String] :token This parameter represents the card token. This parameter is effective only when the service is \&quot;stripe\&quot;.
+    # @option opts [String] :affiliate_id Affiliate id of inviter user.
     # @return [Subscription]
     def create_subscription(service, opts = {})
       data, _status_code, _headers = create_subscription_with_http_info(service, opts)
@@ -156,6 +157,7 @@ module Aimastering
     # @param [Hash] opts the optional parameters
     # @option opts [String] :stripe_plan_id The Stripe plan id. This parameter is effective only when the service is \&quot;stripe\&quot;.
     # @option opts [String] :token This parameter represents the card token. This parameter is effective only when the service is \&quot;stripe\&quot;.
+    # @option opts [String] :affiliate_id Affiliate id of inviter user.
     # @return [Array<(Subscription, Fixnum, Hash)>] Subscription data, response status code and response headers
     def create_subscription_with_http_info(service, opts = {})
       if @api_client.config.debugging
@@ -187,6 +189,7 @@ module Aimastering
       form_params["service"] = service
       form_params["stripe_plan_id"] = opts[:'stripe_plan_id'] if !opts[:'stripe_plan_id'].nil?
       form_params["token"] = opts[:'token'] if !opts[:'token'].nil?
+      form_params["affiliate_id"] = opts[:'affiliate_id'] if !opts[:'affiliate_id'].nil?
 
       # http body (model)
       post_body = nil

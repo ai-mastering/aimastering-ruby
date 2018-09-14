@@ -138,7 +138,8 @@ service = "service_example" # String | This parameter represents the payment mes
 
 opts = { 
   stripe_plan_id: "stripe_plan_id_example", # String | The Stripe plan id. This parameter is effective only when the service is \"stripe\".
-  token: "token_example" # String | This parameter represents the card token. This parameter is effective only when the service is \"stripe\".
+  token: "token_example", # String | This parameter represents the card token. This parameter is effective only when the service is \"stripe\".
+  affiliate_id: "affiliate_id_example" # String | Affiliate id of inviter user.
 }
 
 begin
@@ -157,6 +158,7 @@ Name | Type | Description  | Notes
  **service** | **String**| This parameter represents the payment message. | 
  **stripe_plan_id** | **String**| The Stripe plan id. This parameter is effective only when the service is \&quot;stripe\&quot;. | [optional] 
  **token** | **String**| This parameter represents the card token. This parameter is effective only when the service is \&quot;stripe\&quot;. | [optional] 
+ **affiliate_id** | **String**| Affiliate id of inviter user. | [optional] 
 
 ### Return type
 

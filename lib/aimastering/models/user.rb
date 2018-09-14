@@ -25,6 +25,10 @@ module Aimastering
 
     attr_accessor :email
 
+    attr_accessor :registration_notified
+
+    attr_accessor :statistics
+
     attr_accessor :created_at
 
     attr_accessor :updated_at
@@ -59,6 +63,8 @@ module Aimastering
         :'auth_id' => :'auth_id',
         :'auth_provider' => :'auth_provider',
         :'email' => :'email',
+        :'registration_notified' => :'registration_notified',
+        :'statistics' => :'statistics',
         :'created_at' => :'created_at',
         :'updated_at' => :'updated_at'
       }
@@ -72,6 +78,8 @@ module Aimastering
         :'auth_id' => :'String',
         :'auth_provider' => :'String',
         :'email' => :'String',
+        :'registration_notified' => :'BOOLEAN',
+        :'statistics' => :'UserStatistics',
         :'created_at' => :'DateTime',
         :'updated_at' => :'DateTime'
       }
@@ -103,6 +111,14 @@ module Aimastering
 
       if attributes.has_key?(:'email')
         self.email = attributes[:'email']
+      end
+
+      if attributes.has_key?(:'registration_notified')
+        self.registration_notified = attributes[:'registration_notified']
+      end
+
+      if attributes.has_key?(:'statistics')
+        self.statistics = attributes[:'statistics']
       end
 
       if attributes.has_key?(:'created_at')
@@ -150,6 +166,8 @@ module Aimastering
           auth_id == o.auth_id &&
           auth_provider == o.auth_provider &&
           email == o.email &&
+          registration_notified == o.registration_notified &&
+          statistics == o.statistics &&
           created_at == o.created_at &&
           updated_at == o.updated_at
     end
@@ -163,7 +181,7 @@ module Aimastering
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, agreed_terms_of_service, auth_id, auth_provider, email, created_at, updated_at].hash
+      [id, agreed_terms_of_service, auth_id, auth_provider, email, registration_notified, statistics, created_at, updated_at].hash
     end
 
     # Builds the object from hash

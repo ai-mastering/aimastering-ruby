@@ -119,6 +119,8 @@ Class | Method | HTTP request | Description
 *Aimastering::SubscriptionApi* | [**get_subscription**](docs/SubscriptionApi.md#get_subscription) | **GET** /subscriptions/{id} | Get a subscription by id.
 *Aimastering::SubscriptionApi* | [**list_subscriptions**](docs/SubscriptionApi.md#list_subscriptions) | **GET** /subscriptions | Get all accessable subscriptions.
 *Aimastering::UserApi* | [**get_self**](docs/UserApi.md#get_self) | **GET** /users/self | Get self user.
+*Aimastering::UserApi* | [**notify_registration**](docs/UserApi.md#notify_registration) | **PUT** /users/self/notify_registration | Notify user is registered.
+*Aimastering::UserApi* | [**send_invitation**](docs/UserApi.md#send_invitation) | **POST** /users/self/send_invitation | Send invitation.
 *Aimastering::UserApi* | [**update_self**](docs/UserApi.md#update_self) | **PUT** /users/self | Update self user.
 *Aimastering::VideoApi* | [**download_video**](docs/VideoApi.md#download_video) | **GET** /videos/{id}/download | Download an video data by id.
 *Aimastering::VideoApi* | [**download_video_by_token**](docs/VideoApi.md#download_video_by_token) | **GET** /videos/download_by_token | Download an video data by video_download_token.
@@ -152,6 +154,7 @@ Class | Method | HTTP request | Description
  - [Aimastering::Plan](docs/Plan.md)
  - [Aimastering::Subscription](docs/Subscription.md)
  - [Aimastering::User](docs/User.md)
+ - [Aimastering::UserStatistics](docs/UserStatistics.md)
  - [Aimastering::Video](docs/Video.md)
  - [Aimastering::VideoDownloadToken](docs/VideoDownloadToken.md)
 
