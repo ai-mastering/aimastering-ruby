@@ -106,7 +106,7 @@ opts = {
   high_cut_freq: 20000, # Float | This parameter represents the high cut freq of the output audio in Hz. This parameter is effective only when the mode is \"custom\".
   ceiling: 0, # Float | 
   ceiling_mode: "0", # String | 
-  oversample: 1, # Float | 
+  oversample: 1, # Integer | 
   sample_rate: 44100, # Integer | This parameter represents the sample rate of the output audio in dB. This parameter is effective only when the mode is \"custom\".
   bit_depth: 16, # Integer | This parameter represents the bit depth of the output audio in dB. This parameter is effective only when the mode is \"custom\".
   output_format: "wav", # String | This parameter represents the format of the output audio. This parameter is effective only when the mode is \"custom\".
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
  **high_cut_freq** | **Float**| This parameter represents the high cut freq of the output audio in Hz. This parameter is effective only when the mode is \&quot;custom\&quot;. | [optional] [default to 20000]
  **ceiling** | **Float**|  | [optional] [default to 0]
  **ceiling_mode** | **String**|  | [optional] [default to 0]
- **oversample** | **Float**|  | [optional] [default to 1]
+ **oversample** | **Integer**|  | [optional] [default to 1]
  **sample_rate** | **Integer**| This parameter represents the sample rate of the output audio in dB. This parameter is effective only when the mode is \&quot;custom\&quot;. | [optional] [default to 44100]
  **bit_depth** | **Integer**| This parameter represents the bit depth of the output audio in dB. This parameter is effective only when the mode is \&quot;custom\&quot;. | [optional] [default to 16]
  **output_format** | **String**| This parameter represents the format of the output audio. This parameter is effective only when the mode is \&quot;custom\&quot;. | [optional] [default to wav]

@@ -24,6 +24,7 @@ module Aimastering
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [File] :file The file to upload.
+    # @option opts [String] :name Audio name. If this is not specified, the name in file parameter is used.
     # @return [Audio]
     def create_audio(opts = {})
       data, _status_code, _headers = create_audio_with_http_info(opts)
@@ -34,6 +35,7 @@ module Aimastering
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [File] :file The file to upload.
+    # @option opts [String] :name Audio name. If this is not specified, the name in file parameter is used.
     # @return [Array<(Audio, Fixnum, Hash)>] Audio data, response status code and response headers
     def create_audio_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -55,6 +57,7 @@ module Aimastering
       # form parameters
       form_params = {}
       form_params["file"] = opts[:'file'] if !opts[:'file'].nil?
+      form_params["name"] = opts[:'name'] if !opts[:'name'].nil?
 
       # http body (model)
       post_body = nil

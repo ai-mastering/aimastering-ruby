@@ -187,7 +187,7 @@ module Aimastering
         :'high_cut_freq' => :'Float',
         :'ceiling' => :'Float',
         :'ceiling_mode' => :'String',
-        :'oversample' => :'Float',
+        :'oversample' => :'Integer',
         :'limiting_error' => :'Float',
         :'video_title' => :'String',
         :'video_status' => :'String',

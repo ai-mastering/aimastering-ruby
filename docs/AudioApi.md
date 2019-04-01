@@ -33,7 +33,8 @@ end
 api_instance = Aimastering::AudioApi.new
 
 opts = { 
-  file: File.new("/path/to/file.txt") # File | The file to upload.
+  file: File.new("/path/to/file.txt"), # File | The file to upload.
+  name: "name_example" # String | Audio name. If this is not specified, the name in file parameter is used.
 }
 
 begin
@@ -50,6 +51,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**| The file to upload. | [optional] 
+ **name** | **String**| Audio name. If this is not specified, the name in file parameter is used. | [optional] 
 
 ### Return type
 

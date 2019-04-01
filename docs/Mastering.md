@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 **high_cut_freq** | **Float** |  | [optional] 
 **ceiling** | **Float** |  | [optional] 
 **ceiling_mode** | **String** |  | [optional] 
-**oversample** | **Float** |  | [optional] 
+**oversample** | **Integer** |  | [optional] 
 **limiting_error** | **Float** |  | [optional] 
 **video_title** | **String** |  | [optional] 
 **video_status** | **String** |  | [optional] 

@@ -37,6 +37,7 @@ describe 'AudioApi' do
   # 
   # @param [Hash] opts the optional parameters
   # @option opts [File] :file The file to upload.
+  # @option opts [String] :name Audio name. If this is not specified, the name in file parameter is used.
   # @return [Audio]
   describe 'create_audio test' do
     it "should work" do

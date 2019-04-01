@@ -97,7 +97,7 @@ module Aimastering
     # @option opts [Float] :high_cut_freq This parameter represents the high cut freq of the output audio in Hz. This parameter is effective only when the mode is \&quot;custom\&quot;. (default to 20000)
     # @option opts [Float] :ceiling  (default to 0)
     # @option opts [String] :ceiling_mode  (default to 0)
-    # @option opts [Float] :oversample  (default to 1)
+    # @option opts [Integer] :oversample  (default to 1)
     # @option opts [Integer] :sample_rate This parameter represents the sample rate of the output audio in dB. This parameter is effective only when the mode is \&quot;custom\&quot;. (default to 44100)
     # @option opts [Integer] :bit_depth This parameter represents the bit depth of the output audio in dB. This parameter is effective only when the mode is \&quot;custom\&quot;. (default to 16)
     # @option opts [String] :output_format This parameter represents the format of the output audio. This parameter is effective only when the mode is \&quot;custom\&quot;. (default to wav)
@@ -131,7 +131,7 @@ module Aimastering
     # @option opts [Float] :high_cut_freq This parameter represents the high cut freq of the output audio in Hz. This parameter is effective only when the mode is \&quot;custom\&quot;.
     # @option opts [Float] :ceiling 
     # @option opts [String] :ceiling_mode 
-    # @option opts [Float] :oversample 
+    # @option opts [Integer] :oversample 
     # @option opts [Integer] :sample_rate This parameter represents the sample rate of the output audio in dB. This parameter is effective only when the mode is \&quot;custom\&quot;.
     # @option opts [Integer] :bit_depth This parameter represents the bit depth of the output audio in dB. This parameter is effective only when the mode is \&quot;custom\&quot;.
     # @option opts [String] :output_format This parameter represents the format of the output audio. This parameter is effective only when the mode is \&quot;custom\&quot;.
