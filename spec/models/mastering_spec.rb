@@ -91,7 +91,7 @@ describe 'Mastering' do
   describe 'test attribute "failure_reason"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["unknown", "expired", "failed_to_prepare", "job_queue"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["unknown", "expired", "failed_to_prepare"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.failure_reason = value }.not_to raise_error
        #end

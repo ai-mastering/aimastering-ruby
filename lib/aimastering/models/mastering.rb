@@ -393,7 +393,7 @@ module Aimastering
       return false unless mode_validator.valid?(@mode)
       status_validator = EnumAttributeValidator.new('String', ["waiting", "processing", "canceled", "failed", "succeeded"])
       return false unless status_validator.valid?(@status)
-      failure_reason_validator = EnumAttributeValidator.new('String', ["unknown", "expired", "failed_to_prepare", "job_queue"])
+      failure_reason_validator = EnumAttributeValidator.new('String', ["unknown", "expired", "failed_to_prepare"])
       return false unless failure_reason_validator.valid?(@failure_reason)
       target_loudness_mode_validator = EnumAttributeValidator.new('String', ["loudness", "rms", "peak", "youtube_loudness"])
       return false unless target_loudness_mode_validator.valid?(@target_loudness_mode)
@@ -437,7 +437,7 @@ module Aimastering
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] failure_reason Object to be assigned
     def failure_reason=(failure_reason)
-      validator = EnumAttributeValidator.new('String', ["unknown", "expired", "failed_to_prepare", "job_queue"])
+      validator = EnumAttributeValidator.new('String', ["unknown", "expired", "failed_to_prepare"])
       unless validator.valid?(failure_reason)
         fail ArgumentError, "invalid value for 'failure_reason', must be one of #{validator.allowable_values}."
       end
