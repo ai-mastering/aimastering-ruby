@@ -129,8 +129,8 @@ module Aimastering
 
     def initialize
       @scheme = 'https'
-      @host = 'bakuage.com:443'
-      @base_path = '/api'
+      @host = 'api.bakuage.com:443'
+      @base_path = ''
       @api_key = {}
       @api_key_prefix = {}
       @timeout = 0

@@ -76,7 +76,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://bakuage.com:443/api*
+All URIs are relative to *https://api.bakuage.com:443*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -114,6 +114,8 @@ Class | Method | HTTP request | Description
 *Aimastering::PaymentApi* | [**list_payments**](docs/PaymentApi.md#list_payments) | **GET** /payments | Get all accessable payments.
 *Aimastering::PaymentCustomerApi* | [**get_default_payment_customer**](docs/PaymentCustomerApi.md#get_default_payment_customer) | **GET** /payment_customers/default | Get a default payment customer.
 *Aimastering::PlanApi* | [**list_plans**](docs/PlanApi.md#list_plans) | **GET** /plans | Get all accessable plans.
+*Aimastering::SpSubscriptionApi* | [**create_sp_subscription**](docs/SpSubscriptionApi.md#create_sp_subscription) | **POST** /sp_subscriptions | Create a new smartphone subscription.
+*Aimastering::SpSubscriptionApi* | [**list_sp_subscriptions**](docs/SpSubscriptionApi.md#list_sp_subscriptions) | **GET** /sp_subscriptions | Get all accessable smartphone subscriptions.
 *Aimastering::StatisticsApi* | [**get_group_buy_statistics**](docs/StatisticsApi.md#get_group_buy_statistics) | **GET** /statistics/group_buy | Get group buy statistics.
 *Aimastering::StatisticsApi* | [**list_anonymized_masterings**](docs/StatisticsApi.md#list_anonymized_masterings) | **GET** /statistics/anonymized_masterings | Get anonymized masterings.
 *Aimastering::StatisticsApi* | [**list_kpis**](docs/StatisticsApi.md#list_kpis) | **GET** /statistics/kpis | Get KPIs.
@@ -159,6 +161,7 @@ Class | Method | HTTP request | Description
  - [Aimastering::Payment](docs/Payment.md)
  - [Aimastering::PaymentCustomer](docs/PaymentCustomer.md)
  - [Aimastering::Plan](docs/Plan.md)
+ - [Aimastering::SpSubscription](docs/SpSubscription.md)
  - [Aimastering::Subscription](docs/Subscription.md)
  - [Aimastering::User](docs/User.md)
  - [Aimastering::UserStatistics](docs/UserStatistics.md)
